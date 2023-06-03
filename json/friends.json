@@ -1,0 +1,112 @@
+[
+    {
+        "img": "../images/friend-01.jpg",
+        "name": "kotayb hatem",
+        "job": "JavaScript Developer",
+        "count-friends": "99",
+        "count-projects": "15",
+        "count-articels": "25",
+        "joined": "02/10/2021",
+        "vip": "true"
+    },
+    {
+        "img": "../images/friend-02.jpg",
+        "name": "karam naeem",
+        "job": "FrontEnd Developer",
+        "count-friends": "80",
+        "count-projects": "11",
+        "count-articels": "9",
+        "joined": "5/11/2021",
+        "vip": "false"
+    },
+    {
+        "img": "../images/friend-03.jpg",
+        "name": "karam bakfani",
+        "job": "BackEnd Developer",
+        "count-friends": "50",
+        "count-projects": "12",
+        "count-articels": "8",
+        "joined": "29/11/2021",
+        "vip": "false"
+    },
+    {
+        "img": "../images/friend-04.jpg",
+        "name": "jalal alshofi",
+        "job": "FrontEnd Developer",
+        "count-friends": "80",
+        "count-projects": "14",
+        "count-articels": "12",
+        "joined": "5/10/2021",
+        "vip": "true"
+    },
+    {
+        "img": "../images/friend-05.jpg",
+        "name": "ammar alkontar",
+        "job": "mobile Developer",
+        "count-friends": "60",
+        "count-projects": "11",
+        "count-articels": "9",
+        "joined": "12/11/2021",
+        "vip": "false"
+    },
+    {
+        "img": "../images/friend-01.jpg",
+        "name": "waseem nasser",
+        "job": "ui/ux developer",
+        "count-friends": "75",
+        "count-projects": "18",
+        "count-articels": "16",
+        "joined": "5/0/2021",
+        "vip": "false"
+    },
+    {
+        "img": "../images/friend-02.jpg",
+        "name": "fares mezher",
+        "job": "python Developer",
+        "count-friends": "88",
+        "count-projects": "10",
+        "count-articels": "10",
+        "joined": "11/11/2021",
+        "vip": "true"
+    },
+    {
+        "img": "../images/friend-04.jpg",
+        "name": "elle odetallah",
+        "job": "BackEnd Developer",
+        "count-friends": "45",
+        "count-projects": "4",
+        "count-articels": "2",
+        "joined": "30/11/2021",
+        "vip": "false"
+    },
+    {
+        "img": "../images/friend-03.jpg",
+        "name": "karam hamzi",
+        "job": "designer",
+        "count-friends": "70",
+        "count-projects": "20",
+        "count-articels": "5",
+        "joined": "17/10/2021",
+        "vip": "false"
+    },
+    {
+        "img": "../images/friend-05.jpg",
+        "name": "kareem aljaramani",
+        "job": "Content Creator",
+        "count-friends": "76",
+        "count-projects": "25",
+        "count-articels": "12",
+        "joined": "3/10/2021",
+        "vip": "true"
+    },
+    {
+        "img": "../images/friend-01.jpg",
+        "name": "rabee ghanem",
+        "job": "frontend Developer",
+        "count-friends": "99",
+        "count-projects": "15",
+        "count-articels": "25",
+        "joined": "02/10/2021",
+        "vip": "true"
+    }
+]

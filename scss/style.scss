@@ -1,0 +1,1998 @@
+@import "mixin";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    scroll-behavior: smooth;
+    &:focus {
+        outline: none;
+    }
+}
+// Variable
+$blue-color: #0075ff;
+$blue-alt-color: #0d69d5;
+$orange-color: #f59e0b;
+$green-color: #22c55e;
+$red-color: #f44336;
+$grey-color: #888;
+
+body {
+    ul {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+    }
+    font-family: 'Opens sans', sans-serif;
+    &::-webkit-scrollbar {
+        width: 15px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: white;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $blue-color;
+        border-radius: 2px;
+        &:hover {
+            background-color: $blue-alt-color;
+        }
+    }
+    .page {
+        background-color: #f1f5f9;
+        min-height: 100vh;
+        .sidebar {
+            width: 250px;
+            z-index: 10;
+            h3 {
+                margin-bottom: 50px;
+                @include mediaQuery(miny) {
+                    font-size: 14px;
+                }
+                @include mediaQuery(mobile) {
+                    font-size: 14px;
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    background-color: black;
+                    width: 80px;
+                    height: 2px;
+                    left: 50%;
+                    bottom: -20px;
+                    transform: translateX(-50%);
+                    @include mediaQuery(miny) {
+                        display: none;
+                    }
+                    @include mediaQuery(mobile) {
+                        display: none;
+                    }
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background-color: black;
+                    border: solid white 4px;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    left: 50%;
+                    bottom: -29px;
+                    transform: translateX(-50%);
+                    @include mediaQuery(miny) {
+                        display: none;
+                    }
+                    @include mediaQuery(mobile) {
+                        display: none;
+                    }
+                }
+            }
+            ul {
+                li {
+                    a {
+                        margin-bottom: 5px;
+                        transition: .3s ease;
+                        &:hover,
+                        &.active {
+                            background-color: #f6f6f6;
+                        }
+                        
+                        span {
+                            margin-left: 10px;
+                            @include mediaQuery(miny) {
+                                display: none;
+                            }
+                            @include mediaQuery(mobile) {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            @include mediaQuery(miny) {
+                width: 62px;
+                padding: 10px;
+            }
+            @include mediaQuery(mobile) {
+                width: 62px;
+                padding: 10px;
+            }
+        }
+        .content {
+            .toUp {
+                width: 40px;
+                height: 40px;
+                bottom: 15px;
+                right: 15px;
+                font-size: 20px;
+                z-index: 100;
+                @include mediaQuery(miny) {
+                    display: none !important;
+                }
+                @include mediaQuery(mobile) {
+                    display: none !important;
+                }
+            }
+            .head {
+                .search {
+                    width: fit-content;
+                    margin-left: 10px;
+                    &::before {
+                        content: url("../images/outline_search_black_18dp.png");
+                        position: absolute;
+                        left: 10px;
+                        top: 50%;
+                        transform: translateY(calc(-50% + 2px));
+                    }
+                    input {
+                        padding-left: 30px;
+                        width: 160px;
+                        transition: width .3s ease;
+                        &::placeholder {
+                            font-size: 14px;
+                        }
+                        &:focus {
+                            width: 200px;
+                            &::placeholder {
+                                opacity: 0;
+                            }
+                        }
+                        @include mediaQuery(miny) {
+                            &:focus {
+                                width: 160px;
+                                &::placeholder {
+                                    opacity: 0;
+                                }
+                            }
+                        }
+                    } 
+                }
+                .icons {
+                    .notification {
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: -4px;
+                            right: -4px;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: $red-color;
+                        }
+                        &:hover {
+                            animation: ding .5s ease;
+                        }
+                    }
+                    .img {
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+            }
+            h1 {
+                margin: 20px 20px 40px;
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -15px;
+                    height: 3px;
+                    border-radius: 10px;
+                }
+                &::before {
+                    width: 130px;
+                    background-color: white;
+                }
+                &::after {
+                    width: 50px;
+                    background-color: black;
+                }
+            }
+            .wrraper {
+                grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+                margin: 20px;
+                @include mediaQuery(miny) {
+                    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                    margin: 10px;
+                    gap: 10px;
+                }
+                @include mediaQuery(mobile) {
+                    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+                    margin: 10px;
+                    gap: 10px;
+                }
+                .welcome {
+                    @include mediaQuery(miny) {
+                        text-align: center;
+                        display: block;
+                    }
+                    @include mediaQuery(mobile) {
+                        text-align: center;
+                        display: block;
+                    }
+                    .intro {
+                        h2 {
+                            @include mediaQuery(miny) {
+                                font-size: 18px;
+                            }
+                        }
+                        p {
+                            @include mediaQuery(miny) {
+                                font-size: 14px;
+                            }
+                        }
+                        .img {
+                            width: 200px;
+                            @include mediaQuery(miny) {
+                                width: 150px;
+                            }
+                            @include mediaQuery(mobile) {
+                                width: 150px;
+                            }
+                        }
+                        .profile {
+                            width: 56px;
+                            height: 56px;
+                            left: 20px;
+                            bottom: -28px;
+                            border: 4px solid white;
+                            box-shadow: 0 0 10px #ddd;
+                            border-radius: 50%;
+                            img {
+                                transition: .3s ease;
+                                &:hover {
+                                    filter: grayscale(1);
+                                }
+                            }
+                            @include mediaQuery(miny) {
+                                width: 66px;
+                                height: 66px;
+                                left: 50%;
+                                border: 5px solid white;
+                                transform: translateX(-50%);
+                            }
+                        }
+                    }
+                    .body {
+                        margin: 70px 0;
+                        @include mediaQuery(miny) {
+                            margin-bottom: 10px;
+                        }
+                        @include mediaQuery(mobile) {
+                            margin-bottom: 10px;
+                        }
+                        .info {
+                            border-left: none;
+                            border-right: none;
+                            .data {
+                                h4 {
+                                    font-weight: 300;
+                                }
+                                @include mediaQuery(miny) {
+                                    padding: 10px 0 10px;
+                                }
+                                @include mediaQuery(mobile) {
+                                    padding: 10px 0 10px;
+                                }
+                            }
+                            @include mediaQuery(miny) {
+                                display: block;
+                            }
+                            @include mediaQuery(mobile) {
+                                display: block;
+                            }
+                        }
+                        .btn-blue {
+                            margin: 20px 15px 10px auto;
+                            @include mediaQuery(miny) {
+                                margin: 20px auto 10px;
+                                padding: 10px 20px;
+                            }
+                        }
+                    }
+                }
+                .quick-draft {
+                    h2 {
+                        @include mediaQuery(miny) {
+                            font-size: 18px;
+                        }
+                    }
+                    p {
+                        @include mediaQuery(miny) {
+                            font-size: 14px;
+                        }
+                    }
+                    form {
+                        input {
+                            &::placeholder {
+                                font-size: 12px;
+                            }
+                        }
+                        textarea {
+                            min-height: 150px;
+                            max-height: 150px;
+                            min-width: 100%;
+                            max-width: 100%;
+                            &::placeholder {
+                                font-size: 12px;
+                            }
+                        }
+                        .btn-blue {
+                            margin: 5px 5px 5px auto;
+                            transition: .3s ease;
+                            &:hover {
+                                background-color: $blue-alt-color;
+                            }
+                            @include mediaQuery(miny) {
+                                margin: 20px auto 10px;
+                                padding: 10px 20px;
+                            }
+                        }
+                    }
+                }
+                .targets {
+                    h2 {
+                        @include mediaQuery(miny) {
+                            font-size: 18px;
+                        }
+                    }
+                    p {
+                        @include mediaQuery(miny) {
+                            font-size: 14px;
+                        }
+                    }
+                    .body {
+                        .row {
+                            &:nth-child(2) {
+                                .icon {
+                                    background-color: rgb(245 158 11 / 20%);
+                                    i {
+                                        color: $orange-color;
+                                    }
+                                }
+                                .info {
+                                    .progress {
+                                        background-color: rgb(245 158 11 / 20%);
+                                        span {
+                                            background-color: $orange-color;
+                                            width: 50%;
+                                            &::before {
+                                                background-color: $orange-color;
+                                            }
+                                            &::after {
+                                                background-color: $orange-color;
+                                            } 
+                                        }
+                                    }
+                                }
+                            }
+                            &:last-child {
+                                .icon {
+                                    background-color: rgb(34 197 94 / 20%);
+                                    i {
+                                        color: $green-color;
+                                    }
+                                }
+                                .info {
+                                    .progress {
+                                        background-color: rgb(34 197 94 / 20%);
+                                        span {
+                                            background-color: $green-color;
+                                            width: 75%;
+                                            &::before {
+                                                background-color: $green-color;                                                
+                                            }
+                                            &::after {
+                                                background-color: $green-color;                                                
+                                            } 
+                                        }
+                                    }
+                                }
+                            }
+                            margin: 10px 0;
+                            .icon {
+                                width: 80px;
+                                height: 70px;
+                                border-radius: 2px;
+                                background-color: rgb(0 117 255 / 20%);
+                                i {
+                                    color: $blue-color;
+                                }
+                            }
+                            .info {
+                                margin-left: 10px;
+                                .progress {
+                                    height: 4px;
+                                    background-color: rgb(0 117 255 / 20%);
+                                    span {
+                                        background-color: #0075ff;
+                                        width: 80%;
+                                        height: 4px;
+                                        &::before {
+                                            content: attr(data-progress);
+                                            cursor: pointer;
+                                            background-color: $blue-color;
+                                            padding: 6px;
+                                            position: absolute;
+                                            top: -33px;
+                                            right: -15px;
+                                            font-size: 11px;
+                                            font-weight: bold;
+                                            color: white;
+                                            border-radius: 6px;
+                                        }
+                                        &::after {
+                                            content: "";
+                                            background-color: $blue-color;
+                                            position: absolute;
+                                            top: -10px;
+                                            right: -3px;
+                                            width: 8px;
+                                            height: 8px;
+                                            clip-path: polygon(0 0, 100% 0, 50% 100%);
+                                        } 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .tickets {
+                    h2 {
+                        @include mediaQuery(miny) {
+                            font-size: 18px;
+                        }
+                    }
+                    p {
+                        @include mediaQuery(miny) {
+                            font-size: 14px;
+                        }
+                    }
+                    .tickets-container {
+                        .ticket {
+                            flex-basis: 46%;
+                            @include mediaQuery(miny) {
+                                flex-basis: 100%;
+                            }
+                            @include mediaQuery(mobile) {
+                                flex-basis: 100%;
+                            }
+                            i {
+                                font-size: 25px;
+                            }
+                            h2 {
+                                margin: 5px 0;
+                            }
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                left: -100%;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                z-index: -1;
+                                background-color: #ddd;
+                                transition: .3s ease;
+                            }
+                            &:hover {
+                                &::before {
+                                    left: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .latest-news {
+                    h2 {
+                        @include mediaQuery(miny) {
+                            font-size: 18px;
+                        }
+                    }
+                    .news {
+                        .row {
+                            margin-bottom: 25px;
+                            @include mediaQuery(miny) {
+                                display: block;
+                            }
+                            .img {
+                                width: 80px;
+                                height: 50px;
+                                @include mediaQuery(miny) {
+                                    margin: 0 auto 10px; 
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                                img {
+                                    transition: .3s ease;
+                                    &:hover {
+                                        filter: grayscale(100%);
+                                    }
+                                }
+                            }
+                            .info {
+                                flex-grow: 1;
+                                .title {
+                                    h2 {
+                                        font-size: 14px;
+                                    }
+                                    p {
+                                        margin-top: 5px;
+                                        font-size: 11px;
+                                    }
+                                }
+                                span {
+                                    font-size: 11px;
+                                }
+                                &:not(:last-child) {
+                                    &::after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 0;
+                                        bottom: -10px;
+                                        width: 100%;
+                                        height: 1px;
+                                        background-color: #ddd;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .latest-tasks {
+                    h2 {
+                        @include mediaQuery(miny) {
+                            font-size: 18px;
+                        }
+                    }
+                    .tasks {
+                        .task {
+                            padding: 1px 2px;
+                            margin-bottom: 25px;
+                            &.opacity {
+                                opacity: 35%;
+                            }
+                            .title {
+                                h2 {
+                                    font-size: 14px;
+                                }
+                                p {
+                                    margin-top: 5px;
+                                    font-size: 11px;
+                                }
+                            }
+                            &:not(:last-child) {
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: -10px;
+                                    width: 100%;
+                                    height: 1px;
+                                    background-color: #ddd;
+                                }
+                            }
+                            i {
+                                transition: .3s ease;
+                                &:hover {
+                                    color: $red-color;
+                                }
+                                &.color {
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+                }
+                .top-search {
+                    h2 {
+                        @include mediaQuery(miny) {
+                            font-size: 18px;
+                        }
+                    }
+                    .data {
+                        .row {
+                            margin-bottom: 25px;
+                        } 
+                    }
+                }
+                .latest-uploads {
+                    h2 {
+                        @include mediaQuery(miny) {
+                            font-size: 18px;
+                        }
+                    }
+                    .files {
+                        .file {
+                            margin-bottom: 20px;
+                            .title {
+                                .img {
+                                    width: 40px;
+                                }
+                                .info {
+                                    p {
+
+                                    }
+                                    h5 {
+                                        font-weight: 300;
+                                    }
+                                }
+                            }
+                            span {
+                                padding: 6px 10px;
+                            }
+                            &:not(:last-child) {
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: -10px;
+                                    width: 100%;
+                                    height: 1px;
+                                    background-color: #888;
+                                }
+                            }
+                        }
+                    }
+                }
+                .project-progress {
+                    h2 {
+                        @include mediaQuery(miny) {
+                            font-size: 18px;
+                        }
+                    }
+                    .progress {
+                        z-index: 2;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            width: 2px;
+                            height: 100%;
+                            left: 13px;
+                            top: 0;
+                            background-color: $blue-color;
+                        }
+                        .row {
+                            margin-bottom: 25px;
+                            &:not(:last-child) {
+                                span {
+                                    &::before {
+                                        content: "";
+                                        position: absolute;
+                                        background-color: $blue-color;
+                                        left: 50%;
+                                        top: 50%;
+                                        transform: translate(-50%, -50%);
+                                        width: 18px;
+                                        height: 18px;
+                                        border-radius: 50%;
+                                    }
+                                }
+                            }
+                            &:nth-child(4) {
+                                span {
+                                    &::before {
+                                        animation: lamp 1s ease infinite;
+                                    }
+                                }
+                            }
+                            span {
+                                border: 3px solid $blue-color;
+                                width: 27px;
+                                height: 27px;
+                            }
+                        }
+                    }
+                    .img {
+                        width: 150px;
+                        bottom: 0px;
+                        right: 10px;
+                        img {
+                            filter: opacity(30%);
+                        }
+                        @include mediaQuery(miny) {
+                            width: 50%;
+                            height: 50%;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                }
+                .reminders {
+                    h2 {
+                        @include mediaQuery(miny) {
+                            font-size: 18px;
+                        }
+                    }
+                    .reminders-container {
+                        .reminder {
+                            margin-bottom: 25px;
+                            &:nth-child(2) {
+                                .info {
+                                    border-left-color: $green-color;
+                                    &::before {
+                                        background-color: $green-color;
+                                    }
+                                }
+                            }
+                            &:nth-child(3) {
+                                .info {
+                                    border-left-color: $orange-color;
+                                    &::before {
+                                        background-color: $orange-color;
+                                    }
+                                }
+                            }
+                            &:nth-child(4) {
+                                .info {
+                                    border-left-color: $red-color;
+                                    &::before {
+                                        background-color: $red-color;
+                                    }
+                                }
+                            }
+                            &:hover {
+                                span {
+                                    opacity: 0;
+                                }
+                            }
+                            span {
+                                width: 15px;
+                                height: 15px;
+                                transition: .5s ease;
+                            }
+                            .info {
+                                padding-left: 15px;
+                                border-left: 2px solid $blue-color;
+                                h4 {
+                                    transition: .3s ease;
+                                }
+                                p {
+                                    font-size: 12px;
+                                    stroke: white 10px;
+                                }
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    left: -100%;
+                                    top: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: $blue-color;
+                                    z-index: -1;
+                                    transition: .3s ease;
+                                }
+                                &:hover {
+                                    h4 {
+                                        color: white;
+                                    }
+                                    p {
+                                        -webkit-text-stroke: white .4px;
+                                    }
+                                    &::before {
+                                        left: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .latest-post {
+                    h2 {
+                        @include mediaQuery(miny) {
+                            font-size: 18px;
+                        }
+                    }
+                    .post {
+                        .title {
+                            padding-left: 0;
+                            .img {
+                                width: 50px;
+                                height: 50px;
+                            }
+                            h4,p {
+                                @include mediaQuery(miny) {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                        .post-write {
+                            padding: 25px 0;
+                            line-height: 1.8;
+                            @include mediaQuery(miny) {
+                                font-size: 15px;
+                                text-align: center;
+                            }
+                        }
+                        .controls {
+                            padding-left: 5px;
+                            padding-right: 5px;
+                            i {
+                                &.love {
+                                    color: red;
+                                }
+                            }
+                        }
+                    }
+                }
+                .social-media {
+                    h2 {
+                        @include mediaQuery(miny) {
+                            font-size: 18px;
+                        }
+                    }
+                    .websites {
+                        .website {
+                            &:first-child {
+                                .info {
+                                    background-color: rgb(13, 105, 213, 20%);
+                                }
+                            }
+                            &:nth-child(3) {
+                                .info {
+                                    background-color: rgb(244, 67, 54, 20%);
+                                }
+                            }
+                            margin-bottom: 20px;
+                            .icon {
+                                width: 60px;
+                                height: 60px;
+                                i {
+                                    font-size: 35px;
+                                }
+                                @include mediaQuery(miny) {
+                                    width: 75px;
+                                    height: 75px;
+                                }
+                            }
+                            .info {
+                                background-color: rgb(0, 117, 255, 20%);
+                                padding: 0 10px;
+                                @include mediaQuery(miny) {
+                                    flex-direction: column;
+                                    gap: 10px;
+                                    padding: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .projects {
+                margin: 20px;
+                h2 {
+                    @include mediaQuery(miny) {
+                        font-size: 18px;
+                    }
+                }
+                .table {
+                    overflow-x: auto;
+                    &::-webkit-scrollbar {
+                        width: 15px;
+                    }
+                    &::-webkit-scrollbar-track {
+                        background-color: #eee;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        background-color: $blue-color;
+                        border-radius: 2px;
+                        &:hover {
+                            background-color: $blue-alt-color;
+                        }
+                    }
+                    table {
+                        min-width: 1400px;
+                        thead {
+                            td {
+                                background-color: #eee;
+                                padding: 15px;
+                                font-weight: bold;
+                            }
+                        }
+                        tbody {
+                            font-size: 15px;
+                            @include mediaQuery(miny) {
+                                font-size: 13px;
+                            }
+                            @include mediaQuery(mobile) {
+                                font-size: 14px;
+                            }
+                            @include mediaQuery(small) {
+                                font-size: 14px;
+                            }
+                            tr {
+                                transition: .3s ease;
+                                &:hover {
+                                    background-color: #f1f5f9;
+                                }
+                                td {
+                                    border: 1px solid #eee;
+                                    padding: 15px;
+                                    .img {
+                                        width: 30px;
+                                        height: 30px;
+                                        &:not(:first-child) {
+                                            margin-left: -15px;
+                                        }
+                                        transition: .3s ease;
+                                        &:hover {
+                                            z-index: 10;
+                                        }
+                                    }
+                                    span {
+                                        font-size: 14px;
+                                        border-radius: 5px;
+                                        cursor: pointer;
+                                        padding: 4px 8px;
+                                        color: white;
+                                        background-color: green;
+                                        &.rejected {
+                                            background-color: $red-color;
+                                        }
+                                        &.pending {
+                                            background-color: #f59e0b;
+                                        }
+                                        &.progress {
+                                            background-color: $blue-color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .comments-list {
+                width: 450px;
+                height: 350px;
+                left: 50%;
+                bottom: 50%;
+                padding: 10px 20px 0;
+                transform: translate(-50%, 50%);
+                transition: .6s ease;
+                z-index: 10;
+                @include mediaQuery(miny) {
+                    width: 350px;
+                }
+                @include mediaQuery(mobile) {
+                    width: 350px;
+                }
+                &.hide {
+                    bottom: -100%;
+                }
+                .close-comment {
+                    border: 1px solid $blue-color;
+                    right: 4px;
+                    top: 4px;
+                    padding: 4px 7px;
+                    transition: .3s ease;
+                    &:hover {
+                        background-color: $red-color;
+                        border-color: $red-color;
+                    }
+                } 
+                .comments {
+                    height: 75%;
+                    width: 100%;
+                    overflow: auto;
+                    .comment {
+                        img {
+                            width: 30px;
+                            height: 30px;
+                        }
+                        p {
+                            .name {
+                                position: absolute;
+                                left: 0;
+                                top: -10px;
+                                font-size: 8px;
+                                font-weight: bold;
+                            }
+                        }
+                        .control {
+                            right: 10px;
+                            bottom: 3px;
+                        }
+                    }
+                    &::-webkit-scrollbar {
+                        width: 15px;
+                    }
+                    &::-webkit-scrollbar-track {
+                        background-color: #ccc;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        background-color: $blue-color;
+                        border-radius: 2px;
+                        &:hover {
+                            background-color: $blue-alt-color;
+                        }
+                    }
+                }
+                form {
+                    bottom: 10px;
+                    input {
+                        width: 90%;
+                        padding: 3px;
+                        &::placeholder {
+                            font-size: 14px;
+                        }
+                    }
+                    i {
+                        font-size: 40px;
+                        transform: translatey(8px);
+                    }
+                }
+            }
+            .wrraper-settings {
+                @include mediaQuery(x-large) {
+                    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+                }
+                margin: 20px;
+                .control {
+                    h2 {
+                        @include mediaQuery(miny) {
+                            font-size: 18px;
+                        }
+                    }
+                    p {
+                        @include mediaQuery(miny) {
+                            font-size: 13px;
+                        }
+                    }
+                    .website-control {
+                        .info {
+                            p {
+                                @include mediaQuery(miny) {
+                                    font-size: 14px;
+                                }
+                                &:last-child {
+                                    @include mediaQuery(miny) {
+                                        font-size: 13px;
+                                    }
+                                }
+                            }
+                        }
+                        .check {
+                            
+                        }
+                    }
+                    textarea {
+                        min-width: 100%;
+                        max-width: 100%;
+                        min-height: 150px;
+                        max-height: 150px;
+                        &::placeholder {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .general-info {
+                    h2 {
+                        @include mediaQuery(miny) {
+                            font-size: 18px;
+                        }
+                    }
+                    p {
+                        @include mediaQuery(miny) {
+                            font-size: 13px;
+                        }
+                    }
+                    form {
+                        label {
+                            width: 100%;
+                            input {
+                                margin-bottom: 15px;
+                                border-radius: 2px;
+                                &:disabled {
+                                    width: 90%;
+                                    background-color: #f1f5f9;
+                                    color: #888;
+                                    cursor: no-drop;
+                                }
+                            }
+                            .content {
+                                a {
+                                    font-size: 18px;
+                                    @include mediaQuery(miny) {
+                                        font-size: 16px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .security {
+                    h2 {
+                        @include mediaQuery(miny) {
+                            font-size: 18px;
+                        }
+                    }
+                    p {
+                        @include mediaQuery(miny) {
+                            font-size: 13px;
+                        }
+                    }
+                    .content {
+                        .row {
+                            &:not(:first-child) {
+                                margin-top: 40px;
+                            }
+                            margin-bottom: 20px;
+                            &:not(:last-child) {
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: -20px;
+                                    width: 100%;
+                                    height: 1px;
+                                    background-color: #ccc;
+                                }
+                            }
+                            &:last-child {
+                                span {
+                                    background-color: #eee;
+                                    color: black;
+                                    &::before {
+                                        background-color: #888;
+                                    }
+                                }
+                            }
+                            span {
+                                @include mediaQuery(miny) {
+                                    font-size: 11px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .social {
+                    h2 {
+                        @include mediaQuery(miny) {
+                            font-size: 18px;
+                        }
+                    }
+                    p {
+                        @include mediaQuery(miny) {
+                            font-size: 13px;
+                        }
+                    }
+                    .content {
+                        .row {
+                            &:first-child {
+                                i {
+                                    &:hover {
+                                        color: $blue-color;
+                                    }
+                                }
+                            }
+                            &:nth-child(2),
+                            &:nth-child(3) {
+                                i {
+                                    &:hover {
+                                        color: $blue-alt-color;
+                                    }
+                                }
+                            }
+                            &:last-child {
+                                i {
+                                    &:hover {
+                                        color: $red-color;
+                                    }
+                                }
+                            }
+                            background-color: #eee;
+                            margin-bottom: 25px;
+                            .icon {
+                                width: 40px;
+                                border-right: 1px solid #ccc;
+                                i {
+                                    transition: .3s ease;
+                                }
+                            }
+                            span {
+                                @include mediaQuery(miny) {
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .wedgets-control {
+                    h2 {
+                        @include mediaQuery(miny) {
+                            font-size: 18px;
+                        }
+                    }
+                    p {
+                        @include mediaQuery(miny) {
+                            font-size: 13px;
+                        }
+                    }
+                    form {
+                        margin-left: 10px;
+                        .row {
+                            margin-bottom: 20px;
+                            input {
+                                padding: 5px;
+                                opacity: 0;
+                                &:checked {
+                                    +label {
+                                        &:before {
+                                            border-color: $blue-color;
+                                        }
+                                        &::after {
+                                            transform: translateY(-50%) scale(1) rotate(360deg);
+                                        }
+                                    }
+                                }
+                            }
+                            label {
+                                padding-left: 10px;
+                                @include mediaQuery(miny) {
+                                    font-size: 14px;
+                                }
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    left: -20px;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 15px;
+                                    height: 15px;
+                                    z-index: 1;
+                                    border-radius: 5px;
+                                    background-color: white;
+                                    border: 2px solid #888;
+                                    cursor: pointer;
+                                }
+                                &::after {
+                                    content: "v";
+                                    font-size: 11px;
+                                    color: white;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    position: absolute;
+                                    left: -19px;
+                                    top: 50%;
+                                    transform: translateY(-50%) scale(0);
+                                    width: 16px;
+                                    transition: .3s ease;
+                                    height: 16px;
+                                    z-index: 2;
+                                    border-radius: 5px;
+                                    border: 1px solid $blue-color;
+                                    background-color: $blue-color;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+                .backup-manager {
+                    h2 {
+                        @include mediaQuery(miny) {
+                            font-size: 18px;
+                        }
+                    }
+                    p {
+                        @include mediaQuery(miny) {
+                            font-size: 13px;
+                        }
+                    }
+                    form {
+                        .row {
+                            margin-bottom: 20px;
+                            input {
+                                padding: 5px;
+                                opacity: 0;
+                                &:checked {
+                                    +label {
+                                        &::before {
+                                            border-color: $blue-color;
+                                        }
+                                        &::after {
+                                            transform: translateY(-50%) scale(1);
+                                        }
+                                    }
+                                }
+                            }
+                            label {
+                                padding-left: 10px;
+                                @include mediaQuery(miny) {
+                                    font-size: 14px;
+                                }
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    left: -20px;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 20px;
+                                    height: 20px;
+                                    z-index: 1;
+                                    border-radius: 50%;
+                                    background-color: white;
+                                    border: 2px solid #888;
+                                    cursor: pointer;
+                                }
+                                &::after {
+                                    content: "";
+                                    font-size: 11px;
+                                    color: white;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    position: absolute;
+                                    left: -16.5px;
+                                    top: 50%;
+                                    transform: translateY(-50%) scale(0);
+                                    width: 15px;
+                                    height: 15px;
+                                    z-index: 2;
+                                    border-radius: 50%;
+                                    border: 1px solid $blue-color;
+                                    background-color: $blue-color;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                        .servers {
+                            margin-top: 40px;
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                top: -15px;
+                                background-color: $grey-color;
+                                width: 100%;
+                                height: 1px;
+                            }
+                            .box {
+                                flex: 28%;
+                                @include mediaQuery(miny) {
+                                    flex: 100%;
+                                }
+                                border-width: 2px;
+                                &.checked {
+                                    border-color: $blue-color;
+                                    i,
+                                    p {
+                                        color: $blue-color;
+                                    }
+                                }
+                                p {
+                                    @include mediaQuery(miny) {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .profile {
+                .profile-info {
+                    @include mediaQuery(miny) {
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    @include mediaQuery(mobile) {
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .info {
+                        @include mediaQuery(miny) {
+                            width: 100%;
+                        }
+                        @include mediaQuery(mobile) {
+                            width: 100%;
+                        }
+                        width: 30%;
+                        .img {
+                            width: 100px;
+                            height: 100px;
+                            &:hover {
+                                &::before {
+                                    bottom: 0;
+                                    transform: rotate(360deg);
+                                }
+                            }
+                            &::before {
+                                content: "forntend developer";
+                                position: absolute;
+                                left: 0%;
+                                bottom: -100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                text-align: center;
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 50%;
+                                color: white;
+                                background-color: rgb(0, 117, 255, 70%);
+                                z-index: 1;
+                                transition: .3s ease;
+                            }
+                        }
+                        .progress {
+                            @include mediaQuery(miny) {
+                                width: 100px;
+                            }
+                            @include mediaQuery(mobile) {
+                                width: 200px;
+                            }
+                            @include mediaQuery(small) {
+                                width: 100px;
+                            }
+                            width: 60%;
+                            height: 5px;
+                            border-radius: 30px;
+                            background-color: #eee;
+                            span {
+                                height: 100%;
+                                width: 70%;
+                            }
+                        }
+                        .icon {
+                            i {
+                                @include mediaQuery(small) {
+                                    font-size: 11px;
+                                }
+                            }
+                        }
+                    }
+                    .details {
+                        @include mediaQuery(miny) {
+                            border-left: none;
+                            border-top: 1px solid #ccc;
+                            text-align: center;
+                        }
+                        @include mediaQuery(mobile) {
+                            border-left: none;
+                            border-top: 1px solid #ccc;
+                        }
+                        border-left: 1px solid #ccc;
+                        .box {
+                            transition: .3s ease;
+                            &:hover {
+                                background-color: #eee;
+                            }
+                            &:not(:last-child) {
+                                border-bottom: 1px solid #ccc;
+                            }
+                            p {
+                                @include mediaQuery(miny) {
+                                    text-align: center;
+                                }
+                                @include mediaQuery(mobile) {
+                                    text-align: center;
+                                }
+                            }
+                            div {
+                                flex-basis: 48%;
+                                @include mediaQuery(miny) {
+                                    flex-basis: 100%;
+                                }
+                                @include mediaQuery(small) {
+                                    flex-basis: 100%;
+                                }
+                                .check {
+                                    @include mediaQuery(miny) {
+                                        margin: 0 auto;
+                                    }
+                                    height: 20px;
+                                    span {
+                                        width: 12px;
+                                        height: 12px;
+                                        &.right {
+                                            transform: translateX(calc(500% - 1px));
+                                        }
+                                        i {
+                                            font-size: 8px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .other-data {
+                    @include mediaQuery(miny) {
+                        flex-direction: column;
+                    }
+                    @include mediaQuery(mobile) {
+                        flex-direction: column;
+                    }
+                    @include mediaQuery(small) {
+                        flex-direction: column;
+                    }
+                    .skills {
+                        h2 {
+                            @include mediaQuery(miny) {
+                                font-size: 18px;
+                            }
+                        }
+                        p {
+                            @include mediaQuery(miny) {
+                                font-size: 14px;
+                            }
+                        }
+                        .content {
+                            .row {
+                                @include mediaQuery(miny) {
+                                    justify-content: center;
+                                }
+                                @include mediaQuery(mobile) {
+                                    justify-content: center;
+                                }
+                                @include mediaQuery(small) {
+                                    justify-content: center;
+                                }
+                                &:not(:last-child) {
+                                    border-bottom: 1px solid #ccc;
+                                }
+                                span {
+                                    background-color: #eee;
+                                    padding-left: 10px;
+                                    padding-right: 10px;
+                                    @include mediaQuery(miny) {
+                                        font-size: 13px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .latest-activities {
+                        flex: 1;
+                        h2 {
+                            @include mediaQuery(miny) {
+                                font-size: 18px;
+                            }
+                        }
+                        p {
+                            @include mediaQuery(miny) {
+                                font-size: 14px;
+                            }
+                        }
+                        .activities {
+                            .row {
+                                @include mediaQuery(miny) {
+                                    flex-direction: column;
+                                }
+                                @include mediaQuery(mobile) {
+                                    flex-direction: column;
+                                }
+                                &:not(:last-child) {
+                                    border-bottom: 1px solid #ccc;
+                                }
+                                .img {
+                                    width: 70px;
+                                    height: 60px;
+                                }
+                                .info {
+                                    div {
+                                        @include mediaQuery(miny) {
+                                            flex-direction: column;
+                                            gap: 10px;
+                                        }
+                                        @include mediaQuery(mobile) {
+                                            flex-direction: column;
+                                            gap: 10px;
+                                        }
+                                        span {
+                                            @include mediaQuery(miny) {
+                                                font-size: 14px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .project-page {
+                @include mediaQuery(large) {
+                    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+                }
+                @include mediaQuery(x-large) {
+                    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+                }
+                .project {
+                    .imgs {
+                        margin-top: 50px;
+                        .img {
+                            border: 2px solid white;
+                            width: 40px;
+                            height: 40px;
+                            &:not(:first-child) {
+                                margin-left: -15px;
+                            }
+                            &:hover {
+                                z-index: 10;
+                            }
+                        }
+                    }
+                    .skills {
+                        @include mediaQuery(miny) {
+                            flex-direction: column;
+                            justify-content: start;
+                        }
+                        @include mediaQuery(mobile) {
+                            flex-direction: column;
+                            justify-content: start;
+                        }
+                        padding-left: 0;
+                        padding-right: 0;
+                        border-left: none;
+                        border-right: none;
+                        justify-content: end;
+                        span {
+                            width: fit-content;
+                            background-color: #eee;
+                        }
+                    }
+                    .price {
+                        @include mediaQuery(miny) {
+                            flex-direction: column;
+                            justify-content: center;
+                            gap: 20px;
+                        }
+                        @include mediaQuery(mobile) {
+                            flex-direction: column;
+                            justify-content: center;
+                            gap: 20px;
+                        }
+                        .progress {
+                            width: 200px;
+                            height: 10px;
+                            background-color: #eee;
+                            border-radius: 30px;
+                            span {
+                                position: absolute;
+                                border-radius: 30px;
+                                width: 50%;
+                                height: 10px;
+                                // background-color: $red-color;
+                            }
+                        }
+                    }
+                    .time {
+                        top: 10px;
+                        right: 10px;
+                    }
+                }
+            }
+            .courses-page {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                .course {
+                    .view {
+                        .img {
+                            height: 200px;
+                        }
+                        .profile {
+                            width: 50px;
+                            height: 50px;
+                            border: 2px solid white;
+                            left: 20px;
+                            top: 20px;
+                            img {
+                                transition: .3s ease;
+                                &:hover {
+                                    filter: saturate(0%);
+                                }
+                            }
+                        }
+                    }
+                    .info {
+                        padding-bottom: 15px;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            bottom: 41px;
+                            width: 100%;
+                            height: 1px;
+                            background-color: #888;
+                        }
+                        p {
+                            line-height: 1.5;
+                        }
+                        .btn-blue {
+                            margin: 20px auto 0;
+                        }
+                    }
+                }
+            }
+            .friends-page {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                .friend {
+                    .profile {
+                        padding-bottom: 0;
+                        .img {
+                            width: 100px;
+                            height: 100px;
+                            margin: 0 auto 10px;
+                        }
+                        .icon {
+                            left: 7px;
+                            top: 7px;
+                            font-size: 12px;
+                            span {
+                                background-color: #eee;
+                                transition: .3s ease;
+                                &:hover {
+                                    background-color: $blue-color;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                    .info {
+                        border-left: none;
+                        border-right: none;
+                        margin-bottom: 0;
+                        padding-left: 0;
+                        padding-right: 0;
+                        .vip {
+                            font-weight: bold;
+                            font-size: 40px;
+                            color: #f59e0b;
+                            opacity: 50%;
+                        }
+                    }
+                    .footer {
+                        padding-top: 10px;
+                    }
+                } 
+            }
+            .files-page {
+                flex-direction: row-reverse;
+                @include mediaQuery(miny) {
+                    flex-direction: column;
+                }
+                @include mediaQuery(mobile) {
+                    flex-direction: column;
+                }
+                .files-state {
+                    width: 350px;
+                    height: fit-content;
+                    @include mediaQuery(miny) {
+                        width: 100%;
+                    }
+                    @include mediaQuery(mobile) {
+                        width: 100%;
+                    }
+                    .content {
+                        .row {
+                            transition: .3s ease;
+                            &:hover {
+                                background-color: #f1f5f9;
+                            }
+                            &:nth-child(2) {
+                                .icon {
+                                    background-color: rgb(34, 197, 94, 20%);                                    
+                                }
+                            }
+                            &:nth-child(3) {
+                                .icon {
+                                    background-color: rgb(244, 67, 54, 20%);
+                                }
+                            }
+                            &:last-child {
+                                .icon {
+                                    background-color: rgb(245, 158, 11, 20%);
+                                }
+                            }
+                            .icon {
+                                width: 50px;
+                                height: 40px;
+                                background-color: rgb(0, 117, 255, 20%);
+                            }
+                        }
+                        .btn-blue {
+                            padding: 10px;
+                            &:hover {
+                                i {
+                                    animation: up 1s ease infinite;
+                                }
+                            }
+                            i {
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                }
+                .files {
+                    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                    .file {
+                        padding-bottom: 0;
+                        height: fit-content;
+                        &:hover {
+                            .img {
+                                transform: rotate(10deg);
+                            }
+                        }
+                        i {
+                            transition: .3s ease;
+                            &:hover {
+                                color: #0075ff;
+                            }
+                        }
+                        .img {
+                            transition: .3s ease;
+                            margin: 20px auto 0;
+                            width: 70px;
+                            height: 70px;
+                            img {
+
+                            }
+                        }
+                        .info {
+                            border-top: 1px solid #ccc;
+                            padding: 10px 0;
+                        }
+                    }
+                }
+            }
+            .plans-page {
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+                @include mediaQuery(miny) {
+                    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                }
+                .plan {
+                    &:nth-child(2) {
+                        .title {
+                            outline-color: $blue-color;
+                        }
+                    }
+                    &:last-child {
+                        .title {
+                            outline-color: $orange-color;
+                        }
+                    }
+                    .title {
+                        border: 2px solid white;
+                        outline: 2px solid $green-color;
+                        span {
+                            font-size: 40px;
+                            &::before {
+                                content: "$";
+                                position: absolute;
+                                left: -12px;
+                                top: -7px;
+                                color: white;
+                                font-size: 20px;
+                            }
+                        }
+                    } 
+                    .details {
+                        .row {
+                            padding-left: 0;
+                            padding-right: 0;
+                            border-bottom: 1px solid #ccc;
+                            &:hover {
+                                margin-left: 5px;
+                                box-shadow: 1px 1px 10px #ccc;
+                            }
+                            .icon {
+                                width: 15px;
+                                height: 15px;
+                                transition: .3s ease;
+                                &:hover {
+                                    transform: scale(1.2);
+                                }
+                                i {
+                                    font-size: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .notifications-page {
+                @include mediaQuery(large) {
+                    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                }
+                @include mediaQuery(x-large) {
+                    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                }
+                .notification {
+                    transition: .3s ease;
+                    @include mediaQuery(miny) {
+                        flex-direction: row;
+                    }
+                    @include mediaQuery(mobile) {
+                        flex-direction: row;
+                    }
+                    @include mediaQuery(small) {
+                        flex-direction: row;
+                    }
+                    &:hover {
+                        background-color: #f1f5f9;
+                        box-shadow: 1px 1px 10px #ccc;
+                    }
+                    .img {
+                        width: 80px;
+                        height: 80px;
+                        .icon {
+                            right: 0;
+                            bottom: 0;
+                            z-index: 10;
+                            width: 25px;
+                            height: 25px;
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes ding {
+    25% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(-15deg);
+    }
+    75% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes lamp {
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+@keyframes up {
+    25% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

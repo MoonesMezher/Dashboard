@@ -1,0 +1,97 @@
+[
+    {
+        "title": "elzero dashboard",
+        "discription": "Elzero Dashboard Project Design And Programming And Hosting",
+        "imgs": ["../images/team-01.png", "../images/team-02.png", "../images/team-03.png","../images/team-04.png", "../images/team-05 (1).png"],
+        "skills": ["Programming","Design","Hosting","marketing"],
+        "progress": "50%",
+        "price": "$ 2500",
+        "time": "15/5/2022"
+    },
+    {
+        "title": "Academy Portal",
+        "discription": "Academy Portal Project Design And Programming",
+        "imgs": ["../images/team-01.png", "../images/team-02.png", "../images/team-03.png"],
+        "skills": ["Programming","Design"],
+        "progress": "75%",
+        "price": "$ 1800",
+        "time": "15/6/2022"
+    },
+    {
+        "title": "Chatting Application",
+        "discription": "Chatting Application Project Design",
+        "imgs": ["../images/team-01.png", "../images/team-02.png", "../images/team-03.png"],
+        "skills": ["Design"],
+        "progress": "100%",
+        "price": "$ 950",
+        "time": "15/6/2022"
+    },
+    {
+        "title": "Ahmed Dashboard",
+        "discription": "Ahmed Dashboard Project Design And Programming And Hosting",
+        "imgs": ["../images/team-01.png", "../images/team-02.png", "../images/team-03.png","../images/team-04.png"],
+        "skills": ["Programming","Design","Hosting","marketing"],
+        "progress": "60%",
+        "price": "$ 1700",
+        "time": "17/6/2022"
+    }
+    ,{
+        "title": "Ahmed Portal",
+        "discription": "Ahmed Portal Project Design And Programming",
+        "imgs": ["../images/team-01.png", "../images/team-02.png", "../images/team-03.png"],
+        "skills": ["Programming","Design"],
+        "progress": "60%",
+        "price": "$ 850",
+        "time": "25/6/2022"
+    }
+    ,{
+        "title": "Mohamed Application",
+        "discription": "Mohamed Application Project Design",
+        "imgs": ["../images/team-01.png", "../images/team-02.png", "../images/team-03.png"],
+        "skills": ["Design"],
+        "progress": "40%",
+        "price": "$ 800",
+        "time": "1/7/2022"
+    }
+    ,{
+        "title": "Mohamed Dashboard",
+        "discription": "Mohamed Dashboard Project Design And Programming And Hosting",
+        "imgs": ["../images/team-01.png", "../images/team-02.png", "../images/team-03.png","../images/team-04.png"],
+        "skills": ["Programming","Design","Hosting","marketing"],
+        "progress": "70%",
+        "price": "$ 1950",
+        "time": "3/7/2022"
+    },{
+        "title": "Mohamed Portal",
+        "discription": "Mohamed Portal Project Design And Programming",
+        "imgs": ["../images/team-01.png", "../images/team-02.png", "../images/team-03.png"],
+        "skills": ["Programming","Design"],
+        "progress": "70%",
+        "price": "$ 1300",
+        "time": "15/7/2022"
+    },{
+        "title": "Ahmed Application",
+        "discription": "Ahmed Application Project Design",
+        "imgs": ["../images/team-01.png", "../images/team-02.png"],
+        "skills": ["Design"],
+        "progress": "90%",
+        "price": "$ 1100",
+        "time": "17/7/2022"
+    }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

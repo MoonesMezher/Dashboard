@@ -1,0 +1,128 @@
+[
+    {
+        "img": "../images/friend-01.jpg",
+        "icon": "fa-comment",
+        "bg-icon": "#22c55e",
+        "name":"kotaba hatem",
+        "discription": "comment about your post",
+        "date": "11/2/2023",
+        "time": "10pm"
+    },
+    {
+        "img": "../images/friend-02.jpg",
+        "icon": "fa-user",
+        "bg-icon": "#0075ff",
+        "name":"karam naeem",
+        "discription": "mentioned you in your post",
+        "date": "11/2/2023",
+        "time": "11pm"
+    },
+    {
+        "img": "../images/friend-01.jpg",
+        "icon": "fa-comment",
+        "bg-icon": "#22c55e",
+        "name":"karam bakfani",
+        "discription": "comment about your post",
+        "date": "10/2/2023",
+        "time": "8pm"
+    },
+    {
+        "img": "../images/friend-02.jpg",
+        "icon": "fa-user",
+        "bg-icon": "#0075ff",
+        "name":"fares mezher",
+        "discription": "mentioned you in your post",
+        "date": "10/2/2023",
+        "time": "1pm"
+    },
+    {
+        "img": "../images/friend-01.jpg",
+        "icon": "fa-comment",
+        "bg-icon": "#22c55e",
+        "name":"jalal alshofi",
+        "discription": "comment about your post",
+        "date": "9/2/2023",
+        "time": "10am"
+    },
+    {
+        "img": "../images/friend-02.jpg",
+        "icon": "fa-user",
+        "bg-icon": "#0075ff",
+        "name":"ammar alkontar",
+        "discription": "mentioned you in your post",
+        "date": "9/2/2023",
+        "time": "11am"
+    },
+    {
+        "img": "../images/friend-01.jpg",
+        "icon": "fa-comment",
+        "bg-icon": "#22c55e",
+        "name":"kotaba hatem",
+        "discription": "comment about your post",
+        "date": "8/2/2023",
+        "time": "3am"
+    },
+    {
+        "img": "../images/friend-02.jpg",
+        "icon": "fa-user",
+        "bg-icon": "#0075ff",
+        "name":"karam naeem",
+        "discription": "mentioned you in your post",
+        "date": "8/2/2023",
+        "time": "2pm"
+    },
+    {
+        "img": "../images/friend-01.jpg",
+        "icon": "fa-comment",
+        "bg-icon": "#22c55e",
+        "name":"elle odetallah",
+        "discription": "comment about your post",
+        "date": "7/2/2023",
+        "time": "7am"
+    },
+    {
+        "img": "../images/friend-02.jpg",
+        "icon": "fa-user",
+        "bg-icon": "#0075ff",
+        "name":"waseem nasser",
+        "discription": "mentioned you in your post",
+        "date": "7/2/2023",
+        "time": "1am"
+    },
+    {
+        "img": "../images/friend-01.jpg",
+        "icon": "fa-comment",
+        "bg-icon": "#22c55e",
+        "name":"karam hamzi",
+        "discription": "comment about your post",
+        "date": "6/2/2023",
+        "time": "4am"
+    },
+    {
+        "img": "../images/friend-02.jpg",
+        "icon": "fa-user",
+        "bg-icon": "#0075ff",
+        "name":"kaream aljaramani",
+        "discription": "mentioned you in your post",
+        "date": "6/2/2023",
+        "time": "5am"
+    },
+    {
+        "img": "../images/friend-01.jpg",
+        "icon": "fa-comment",
+        "bg-icon": "#22c55e",
+        "name":"elle odetallah",
+        "discription": "comment about your post",
+        "date": "5/2/2023",
+        "time": "9am"
+    },
+    {
+        "img": "../images/friend-02.jpg",
+        "icon": "fa-user",
+        "bg-icon": "#0075ff",
+        "name":"waseem nasser",
+        "discription": "mentioned you in your post",
+        "date": "5/2/2023",
+        "time": "8am"
+    }
+]

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard</title>
+        <!-- Icon Of Website -->
+        <link rel="shortcut icon" href="images/" type="image/x-icon"> 
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="css/all.min.css">
+        <!-- Animate Css -->
+        <link rel="stylesheet" href="css/animate.min.css">
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <!--render all elements in normalize-->
+        <link rel="stylesheet" href="css/normalize.css">
+        <!-- Css Framework -->
+        <link rel="stylesheet" href="css/framework.css">
+        <!-- Main Css File -->
+        <link rel="stylesheet" href="scss/style.css">
+    </head>
+    <body>    
+        <!-- Main Page -->
+        <main class="m-0 page d-f">
+            <!-- Start Side Bar  -->
+            <aside class="sidebar bg-white p-20 relative b-shadow">
+                <h3 class="relative mt-0 txt-c">mez</h3>
+                <ul class="p-0">
+                    <li>
+                        <a class="d-f p-10 align-c br-6 fs-14 black" href="index.html">
+                            <i class="fas fa-chart-bar fa-fw"></i>
+                            <span>dashboard</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-f p-10 align-c br-6 fs-14 black" href="settings.html">
+                            <i class="fas fa-layer-group fa-fw"></i>
+                            <span>settings</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-f p-10 align-c br-6 fs-14 black" href="profile.html">
+                            <i class="fas fa-user fa-fw"></i>
+                            <span>profile</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-f p-10 align-c br-6 fs-14 black" href="projects.html">
+                            <i class="fas fa-project-diagram fa-fw"></i>
+                            <span>projects</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-f p-10 align-c br-6 fs-14 black" href="courses.html">
+                            <i class="fas fa-graduation-cap fa-fw"></i>
+                            <span>courses</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a class="active d-f p-10 align-c br-6 fs-14 black" href="friends.html">
+                            <i class="fas fa-user-circle fa-fw"></i>
+                            <span>friends</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-f p-10 align-c br-6 fs-14 black" href="files.html">
+                            <i class="fas fa-file fa-fw"></i>
+                            <span>files</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-f p-10 align-c br-6 fs-14 black" href="plans.html">
+                            <i class="fas fa-credit-card fa-fw"></i>
+                            <span>plans</span> 
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+            <!-- End Side Bar  -->
+
+            <!-- Start Content -->
+            <section class="content w-full relative overflow-h">
+                <!-- Start Header -->
+                <header class="head p-15 space-between bg-white">
+                    <form class="search relative">
+                        <input type="search" class="p-10 b br-10" placeholder="Type A Keyword">
+                    </form>
+                    <div class="icons d-f align-c g-10">
+                        <span class="notification relative">
+                            <a href="notification.html">
+                                <i class="fas fa-bell fa-lg pointer black"></i>                                
+                            </a>
+                        </span>
+                        <div class="img circle align-c">
+                            <a href="profile.html">
+                                <img class="circle pointer" class="pointer"  src="images/avatar.png" alt="avatar">
+                            </a>
+                        </div>
+                    </div>
+                </header>
+                <!-- End Header -->
+                <h1 class="relative">friends</h1>
+                <!-- Start Courses Page -->
+                <div class="friends-page m-20 d-g g-20">
+                </div>
+                <!-- End Courses Page -->
+            </section>
+            <!-- End Content -->
+        </main>
+
+        <!-- Importing JQuery File  -->
+        <script src="js/jquery-3.6.3.min.js"></script>
+        <!-- Main Js File -->
+        <script src="js/friend.js"></script>
+    </body>
+</html>

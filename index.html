@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard</title>
+        <!-- Icon Of Website -->
+        <link rel="shortcut icon" href="images/" type="image/x-icon"> 
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="css/all.min.css">
+        <!-- Animate Css -->
+        <link rel="stylesheet" href="css/animate.min.css">
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <!--render all elements in normalize-->
+        <link rel="stylesheet" href="css/normalize.css">
+        <!-- Css Framework -->
+        <link rel="stylesheet" href="css/framework.css">
+        <!-- Main Css File -->
+        <link rel="stylesheet" href="scss/style.css">
+    </head>
+    <body>    
+        <!-- Main Page -->
+        <main class="m-0 page d-f">
+            <!-- Start Side Bar  -->
+            <aside class="sidebar bg-white p-20 relative b-shadow">
+                <h3 class="relative mt-0 txt-c">mez</h3>
+                <ul class="p-0">
+                    <li>
+                        <a class="active d-f p-10 align-c br-6 fs-14 black" href="index.html">
+                            <i class="fas fa-chart-bar fa-fw"></i>
+                            <span>dashboard</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-f p-10 align-c br-6 fs-14 black" href="settings.html">
+                            <i class="fas fa-layer-group fa-fw"></i>
+                            <span>settings</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-f p-10 align-c br-6 fs-14 black" href="profile.html">
+                            <i class="fas fa-user fa-fw"></i>
+                            <span>profile</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-f p-10 align-c br-6 fs-14 black" href="projects.html">
+                            <i class="fas fa-project-diagram fa-fw"></i>
+                            <span>projects</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-f p-10 align-c br-6 fs-14 black" href="courses.html">
+                            <i class="fas fa-graduation-cap fa-fw"></i>
+                            <span>courses</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-f p-10 align-c br-6 fs-14 black" href="friends.html">
+                            <i class="fas fa-user-circle fa-fw"></i>
+                            <span>friends</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-f p-10 align-c br-6 fs-14 black" href="files.html">
+                            <i class="fas fa-file fa-fw"></i>
+                            <span>files</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-f p-10 align-c br-6 fs-14 black" href="plans.html">
+                            <i class="fas fa-credit-card fa-fw"></i>
+                            <span>plans</span> 
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+            <!-- End Side Bar  -->
+
+            <!-- Start Content -->
+            <section class="content w-full relative overflow-h">
+                <div class="toUp fixed none circle bg-white d-f center pointer b-shadow">
+                    <i class="fas fa-long-arrow-alt-up blue"></i>
+                </div>
+                <!-- Start Header -->
+                <header class="head p-15 space-between bg-white">
+                    <form class="search relative">
+                        <input type="search" class="p-10 b br-10" placeholder="Type A Keyword">
+                    </form>
+                    <div class="icons d-f align-c g-10">
+                        <span class="notification relative">
+                            <a href="notification.html">
+                                <i class="fas fa-bell fa-lg pointer black"></i>                                
+                            </a>
+                        </span>
+                        <div class="img circle align-c">
+                            <a href="profile.html">
+                                <img class="circle pointer" class="pointer"  src="images/avatar.png" alt="avatar">
+                            </a>
+                        </div>
+                    </div>
+                </header>
+                <!-- End Header -->
+                <h1 class="relative">dashboard</h1>
+                <!-- Start Wrraper -->
+                <div class="wrraper d-g g-20">
+                    <!-- Start Welcome Wedget-->
+                    <div class="welcome bg-white br-10 overflow-h">
+                        <div class="intro p-20 d-f justify-between bg-eee relative">
+                            <div>
+                                <h2>welcome</h2>
+                                <p class="grey mt-10">mez</p>
+                            </div>
+                            <div class="img">
+                                <img class="pointer" src="images/welcome.png" alt="welcome">
+                            </div>
+                            <div class="profile absolute pointer">
+                                <img class="pointer"  src="images/avatar.png" alt="profile">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="info b p-20 txt-c bg-white d-f center justify-around">
+                                <div class="data">
+                                    <h4>osama elzero</h4>
+                                    <p class="grey mt-10 fs-14">developer</p>
+                                </div>
+                                <div class="data">
+                                    <h4>80</h4>
+                                    <p class="grey mt-10 fs-14">projects</p>
+                                </div>
+                                <div class="data">
+                                    <h4>$8500</h4>
+                                    <p class="grey mt-10 fs-14">earned</p>
+                                </div>
+                            </div>
+                            <div class="btn-blue">
+                                <a href="profile.html">profile</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Welcome Wedget-->
+
+                    <!-- Start Quick Draft Wedget-->
+                    <div class="quick-draft bg-white br-10 overflow-h p-20">
+                        <h2>quick draft</h2>
+                        <p class="grey mt-10">write a draft for your ideas</p>
+                        <form class="d-f column g-20 mt-20">
+                            <input class="w-full p-10 br-6 bg-eee b-none" type="text" placeholder="title">
+                            <textarea class="p-10 br-6 bg-eee b-none" placeholder="your thoughts"></textarea>
+                            <input class="btn-blue b-none d-b" type="submit" value="save">
+                        </form>
+                    </div>
+                    <!-- End Quick Draft Wedget-->
+        
+                    <!-- Start Target Wedget -->
+                    <div class="targets bg-white br-10 overflow-h p-20">
+                        <h2>yearly targets</h2>
+                        <p class="grey mt-10">targets of the year</p>
+                        <div class="body d-f column justify-c g-10 mt-20">
+                            <div class="row d-f">
+                                <div class="icon d-f center">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </div>
+                                <div class="info w-full d-f g-10 justify-c column">
+                                    <p class="grey fs-14">money</p>
+                                    <h3 class="fs-14">$20.000</h3>
+                                    <div class="progress w-full relative">
+                                        <span class="absolute" data-progress="80%"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row d-f">
+                                <div class="icon d-f center">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="info w-full d-f g-10 justify-c column">
+                                    <p class="grey fs-14">projects</p>
+                                    <h3 class="fs-14">24</h3>
+                                    <div class="progress w-full relative">
+                                        <span class="absolute" data-progress="55%"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row d-f">
+                                <div class="icon d-f center">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="info w-full d-f g-10 justify-c column">
+                                    <p class="grey fs-14">team</p>
+                                    <h3 class="fs-14">12</h3>
+                                    <div class="progress w-full relative">
+                                        <span class="absolute" data-progress="75%"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Target Wedget -->
+
+                    <!-- Start Tickets Wedget -->
+                    <div class="tickets bg-white br-10 overflow-h p-20">
+                        <h2>tickets statistics</h2>
+                        <p class="grey mt-10">everything about support tickets</p>
+                        <div class="tickets-container d-f justify-c f-wrap g-10 mt-20">
+                            <div class="ticket relative overflow-h z-1 txt-c pointer b br-6 p-20">
+                                <i class="fas fa-newspaper d-b orange"></i>
+                                <h2>2500</h2>
+                                <p class="grey fs-14">total</p>
+                            </div>
+
+                            <div class="ticket relative overflow-h z-1 txt-c pointer b br-6 p-20">
+                                <i class="fas fa-spinner d-b blue"></i>
+                                <h2>500</h2>
+                                <p class="grey fs-14">pending</p>
+                            </div>
+
+                            <div class="ticket relative overflow-h z-1 txt-c pointer b br-6 p-20">
+                                <i class="fas fa-check-circle d-b green"></i>
+                                <h2>1900</h2>
+                                <p class="grey fs-14">closed</p>
+                            </div>
+
+                            <div class="ticket relative overflow-h z-1 txt-c pointer b br-6 p-20">
+                                <i class="fas fa-magic d-b red"></i>
+                                <h2>100</h2>
+                                <p class="grey fs-14">deleted</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Tickets Wedget -->
+
+                    <!-- Start Latest News Wedget -->
+                    <div class="latest-news bg-white br-10 overflow-h p-20">
+                        <h2>latest news</h2>
+                        <div class="news mt-20">
+                            <div class="row d-f g-10">
+                                <div class="img br-6 overflow-h">
+                                    <img class="pointer" src="images/news-01.png" alt="news">
+                                </div>
+                                <div class="info space-between relative">
+                                    <div class="title">
+                                        <h2>created SASS section</h2>
+                                        <p class="grey">new SASS exampels & tutorials</p>
+                                    </div>
+                                    <span class="p-6 grey b br-6 bg-eee">3 days ago</span>
+                                </div>
+                            </div>
+
+                            <div class="row d-f g-10">
+                                <div class="img br-6 overflow-h">
+                                    <img class="pointer" src="images/news-02.png" alt="news">
+                                </div>
+                                <div class="info space-between relative">
+                                    <div class="title">
+                                        <h2>changed the design</h2>
+                                        <p class="grey">a brand new website design</p>
+                                    </div>
+                                    <span class="p-6 grey b br-6 bg-eee">7 days ago</span>
+                                </div>
+                            </div>
+
+                            <div class="row d-f g-10">
+                                <div class="img br-6 overflow-h">
+                                    <img class="pointer" src="images/news-03.png" alt="news">
+                                </div>
+                                <div class="info space-between relative">
+                                    <div class="title">
+                                        <h2>team increased</h2>
+                                        <p class="grey">3 developers joined the team</p>
+                                    </div>
+                                    <span class="p-6 grey b br-6 bg-eee">9 days ago</span>
+                                </div>
+                            </div>
+
+                            <div class="row d-f g-10">
+                                <div class="img br-6 overflow-h">
+                                    <img class="pointer" src="images/news-04.png" alt="news">
+                                </div>
+                                <div class="info space-between relative">
+                                    <div class="title">
+                                        <h2>added payment gateway</h2>
+                                        <p class="grey">many new payment gateways added</p>
+                                    </div>
+                                    <span class="p-6 grey b br-6 bg-eee">5 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Latest News Wedget -->
+
+                    <!-- Start Latest Tasks Wedget -->
+                    <div class="latest-tasks bg-white br-10 overflow-h p-20">
+                        <h2>latest tasks</h2>
+                        <div class="tasks mt-20">
+                            <div class="task space-between relative">
+                                <div class="title">
+                                    <h2>record on new video</h2>
+                                    <p class="grey">record python create exe project</p>
+                                </div>
+                                <i class="fas fa-trash pointer"></i>
+                            </div>
+
+                            <div class="task space-between relative">
+                                <div class="title">
+                                    <h2>write article</h2>
+                                    <p class="grey">write low level vs high level language</p>
+                                </div>
+                                <i class="fas fa-trash pointer"></i>
+                            </div>
+
+                            <div class="task space-between relative">
+                                <div class="title">
+                                    <h2>finish project</h2>
+                                    <p class="grey">publish academy programming project</p>
+                                </div>
+                                <i class="fas fa-trash pointer"></i>
+                            </div>
+
+                            <div class="task space-between relative opacity">
+                                <div class="title">
+                                    <del>
+                                        <h2>record on new video</h2>
+                                        <p class="grey">record python create exe project</p>
+                                    </del>
+                                </div>
+                                <i class="fas fa-trash pointer color"></i>
+                            </div>
+
+                            <div class="task space-between relative">
+                                <div class="title">
+                                    <h2>finish lission</h2>
+                                    <p class="grey">finish teaching flex box</p>
+                                </div>
+                                <i class="fas fa-trash pointer"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Latest Tasks Wedget -->
+
+                    <!-- Start Top Search Wedget -->
+                    <div class="top-search bg-white br-10 overflow-h p-20">
+                        <h2>top search items</h2>
+                        <div class="data mt-20">
+                            <div class="row space-between">
+                                <p class="grey">keyword</p>
+                                <div class="grey">search count</div>
+                            </div>
+                            <div class="row space-between">
+                                <p>programming</p>
+                                <span class="p-6 fs-14 bg-eee br-6">220</span>
+                            </div>
+                            <div class="row space-between">
+                                <p>javascript</p>
+                                <span class="p-6 fs-14 bg-eee br-6">180</span>
+                            </div>
+                            <div class="row space-between">
+                                <p>php</p>
+                                <span class="p-6 fs-14 bg-eee br-6">160</span>
+                            </div>
+                            <div class="row space-between">
+                                <p>code</p>
+                                <span class="p-6 fs-14 bg-eee br-6">145</span>
+                            </div>
+                            <div class="row space-between">
+                                <p>design</p>
+                                <span class="p-6 fs-14 bg-eee br-6">110</span>
+                            </div>
+                            <div class="row space-between">
+                                <p>logic</p>
+                                <span class="p-6 fs-14 bg-eee br-6">95</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Top Search Wedget -->
+
+                    <!-- Start Latest Uploads Wedget -->
+                    <div class="latest-uploads bg-white br-10 overflow-h p-20">
+                        <h2>latest uploads</h2>
+                        <div class="files mt-20">
+                            <div class="file space-between relative">
+                                <div class="title d-f center g-10">
+                                    <div class="img">
+                                        <img src="images/avi.svg" alt="file">
+                                    </div>
+                                    <div class="info">
+                                        <p class="fs-14">my-file-vedio.avi</p>
+                                        <h5 class="grey mt-5">Elzero</h5>
+                                    </div>
+                                </div>
+                                <span class="fs-14 bg-eee br-6">2.9mb</span>
+                            </div>
+
+                            <div class="file space-between relative">
+                                <div class="title d-f center g-10">
+                                    <div class="img">
+                                        <img src="images/dll.svg" alt="file">
+                                    </div>
+                                    <div class="info">
+                                        <p class="fs-14">my-DLL-file.pdf</p>
+                                        <h5 class="grey mt-5">admin</h5>
+                                    </div>
+                                </div>
+                                <span class="fs-14 bg-eee br-6">5.4mb</span>
+                            </div>
+
+                            <div class="file space-between relative">
+                                <div class="title d-f center g-10">
+                                    <div class="img">
+                                        <img src="images/eps.svg" alt="file">
+                                    </div>
+                                    <div class="info">
+                                        <p class="fs-14">my-eps-file.pdf</p>
+                                        <h5 class="grey mt-5">user</h5>
+                                    </div>
+                                </div>
+                                <span class="fs-14 bg-eee br-6">7.2mb</span>
+                            </div>
+
+                            <div class="file space-between relative">
+                                <div class="title d-f center g-10">
+                                    <div class="img">
+                                        <img src="images/pdf.svg" alt="file">
+                                    </div>
+                                    <div class="info">
+                                        <p class="fs-14">my-file.pdf</p>
+                                        <h5 class="grey mt-5">designer</h5>
+                                    </div>
+                                </div>
+                                <span class="fs-14 bg-eee br-6">25.3mb</span>
+                            </div>
+
+                            <div class="file space-between relative">
+                                <div class="title d-f center g-10">
+                                    <div class="img">
+                                        <img src="images/psd.svg" alt="file">
+                                    </div>
+                                    <div class="info">
+                                        <p class="fs-14">my-svg-file.pdf</p>
+                                        <h5 class="grey mt-5">developer</h5>
+                                    </div>
+                                </div>
+                                <span class="fs-14 bg-eee br-6">23.9mb</span>
+                            </div>
+
+                            <div class="file space-between relative">
+                                <div class="title d-f center g-10">
+                                    <div class="img">
+                                        <img src="images/zip.svg" alt="file">
+                                    </div>
+                                    <div class="info">
+                                        <p class="fs-14">my-zip-file.pdf</p>
+                                        <h5 class="grey mt-5">IT</h5>
+                                    </div>
+                                </div>
+                                <span class="fs-14 bg-eee br-6">4.8mb</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Latest Uploads Wedget -->
+
+                    <!-- Start Project Progress Wedget -->
+                    <div class="project-progress relative bg-white br-10 overflow-h p-20">
+                        <h2>last project progress</h2>
+                        <div class="progress mt-20 relative">
+                            <div class="row d-f align-c g-10">
+                                <span class="circle bg-white d-b relative"></span>
+                                <p>got the project</p>
+                            </div>
+                            <div class="row d-f align-c g-10">
+                                <span class="circle bg-white d-b relative"></span>
+                                <p>started the project</p>
+                            </div>
+                            <div class="row d-f align-c g-10">
+                                <span class="circle bg-white d-b relative"></span>
+                                <p>the project about to finish</p>
+                            </div>
+                            <div class="row d-f align-c g-10">
+                                <span class="circle bg-white d-b relative"></span>
+                                <p>test the project</p>
+                            </div>
+                            <div class="row d-f align-c g-10">
+                                <span class="circle bg-white d-b relative"></span>
+                                <p>finish the project & get money</p>
+                            </div>
+                        </div>
+                        <div class="img absolute">
+                            <img src="images/project.png" alt="project">
+                        </div>
+                    </div>
+                    <!-- End Project Progress Wedget -->
+
+                    <!-- Start Reminders Wedget -->
+                    <div class="reminders bg-white br-10 overflow-h p-20">
+                        <h2>reminders</h2>
+                        <div class="reminders-container mt-20">
+                            <div class="reminder d-f align-c g-15">
+                                <span class="d-b circle bg-blue"></span>
+                                <div class="info w-full pointer relative overflow-h z-1">
+                                    <h4 class="fs-14">check my tasks list</h4>
+                                    <p class="grey mt-10">28/09/2022 - 12:00am</p>
+                                </div>
+                            </div>
+                            <div class="reminder d-f align-c g-15">
+                                <span class="d-b circle bg-green"></span>
+                                <div class="info w-full pointer relative overflow-h z-1">
+                                    <h4 class="fs-14">check my projects</h4>
+                                    <p class="grey mt-10">27/09/2022 - 12:00am</p>
+                                </div>
+                            </div>
+                            <div class="reminder d-f align-c g-15">
+                                <span class="d-b circle bg-orange"></span>
+                                <div class="info w-full pointer relative overflow-h z-1">
+                                    <h4 class="fs-14">check all my clients</h4>
+                                    <p class="grey mt-10">26/09/2022 - 12:00am</p>
+                                </div>
+                            </div>
+                            <div class="reminder d-f align-c g-15">
+                                <span class="d-b circle bg-red"></span>
+                                <div class="info w-full pointer relative overflow-h z-1">
+                                    <h4 class="fs-14">finish the development workshop</h4>
+                                    <p class="grey mt-10">25/09/2022 - 12:00am</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Reminders Wedget -->
+
+                    <!-- Start Latest Post Wedget -->
+                    <div class="latest-post bg-white p-20 overflow-h br-10">
+                        <h2>latest post</h2>
+                        <div class="post mt-20 relative overflow-h">
+                            <div class="title d-f align-c g-20 p-20">
+                                <div class="img">
+                                    <img class="pointer" src="images/avatar.png" alt="profile">
+                                </div>
+                                <div class="info">
+                                    <h4 class="pointer">
+                                        <a class="black" href="profile.html">moones mezher</a>
+                                    </h4>
+                                    <p class="grey mt-5 fs-14">about 3 hours ago</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <p class="post-write">
+                                You Can Fool All Of The People Some Of The Time, And Some Of The People All Of The Time, But You Can't Fool All Of The People All Of The Time.
+                            </p>
+                            <hr>
+                            <div class="controls p-20 space-between w-full">
+                                <span class="like">
+                                    <i class="fas fa-heart grey pointer"></i>
+                                    <span class="count grey nolike">767</span>
+                                </span>
+                                <span class="comment">
+                                    <i class="fas fa-comment grey pointer"></i>
+                                    <span class="count grey">121</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Latest Post Wedget -->
+
+                    <!-- Start Social Media Stats -->
+                    <div class="social-media bg-white p-20 overflow-h br-10">
+                        <h2>social media stats</h2>
+                        <div class="websites mt-20">
+                            <div class="website d-f">
+                                <span class="icon d-f center bg-blue">
+                                    <i class="fab fa-twitter white"></i>
+                                </span>
+                                <div class="info space-between w-full">
+                                    <p class="blue">90K followers</p>
+                                    <a class="btn-blue fs-14" href="twitter">follow</a>
+                                </div>
+                            </div>
+
+                            <div class="website d-f">
+                                <span class="icon d-f center bg-blue-alt">
+                                    <i class="fab fa-facebook-f white"></i>
+                                </span>
+                                <div class="info space-between w-full">
+                                    <p class="blue-alt">2m like</p>
+                                    <a class="btn-blue-alt fs-14" href="facebook">like</a>
+                                </div>
+                            </div>
+
+                            <div class="website d-f">
+                                <span class="icon d-f center bg-red">
+                                    <i class="fab fa-youtube white"></i>
+                                </span>
+                                <div class="info space-between w-full">
+                                    <p class="red">1m subscribe</p>
+                                    <a class="btn-red fs-14" href="youtube">subscribe</a>
+                                </div>
+                            </div>
+
+                            <div class="website d-f">
+                                <span class="icon d-f center bg-blue-alt">
+                                    <i class="fab fa-linkedin white"></i>
+                                </span>
+                                <div class="info space-between w-full">
+                                    <p class="blue-alt">70K followers</p>
+                                    <a class="btn-blue-alt fs-14" href="linkedin">follow</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Social Media Stats -->
+                </div>
+                <!-- End Wrraper -->
+
+                <!-- Start Projects -->
+                <div class="projects bg-white p-20 br-10 overflow-h">
+                    <h2>projects</h2>
+                    <div class="table mt-20">
+                        <table class="w-full fs-15">
+                            <thead class="bg-eee">
+                                <tr>
+                                    <td>name</td>
+                                    <td>finish date</td>
+                                    <td>client</td>
+                                    <td>price</td>
+                                    <td>team</td>
+                                    <td>status</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="relative">
+                                    <td>ministry wikibidia</td>
+                                    <td>10 may 2022</td>
+                                    <td>ministry</td>
+                                    <td>5300$</td>
+                                    <td class="team d-f">
+                                        <div class="img relative pointer">
+                                            <img class="circle" src="images/team-01.png" alt="team">
+                                        </div>
+                                        <div class="img relative pointer">
+                                            <img class="circle" src="images/team-02.png" alt="team">
+                                        </div>
+                                        <div class="img relative pointer">
+                                            <img class="circle" src="images/team-03.png" alt="team">
+                                        </div>
+                                        <div class="img relative pointer">
+                                            <img class="circle" src="images/team-04.png" alt="team">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="pending">pending</span>
+                                    </td>
+                                </tr>
+
+                                <tr class="relative">
+                                    <td>elzero shop</td>
+                                    <td>12 oct 2021</td>
+                                    <td>elzero company</td>
+                                    <td>2300$</td>
+                                    <td class="team d-f">
+                                        <div class="img relative pointer">
+                                            <img class="circle" src="images/team-01.png" alt="team">
+                                        </div>
+                                        <div class="img relative pointer">
+                                            <img class="circle" src="images/team-02.png" alt="team">
+                                        </div>
+                                        <div class="img relative pointer">
+                                            <img class="circle" src="images/team-03.png" alt="team">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="progress">in progress</span>
+                                    </td>
+                                </tr>
+
+                                <tr class="relative">
+                                    <td>bouba app</td>
+                                    <td>05 sep 2021</td>
+                                    <td>bouba</td>
+                                    <td>800$</td>
+                                    <td class="team d-f">
+                                        <div class="img relative pointer">
+                                            <img class="circle" src="images/team-01.png" alt="team">
+                                        </div>
+                                        <div class="img relative pointer">
+                                            <img class="circle" src="images/team-02.png" alt="team">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="completed">completed</span>
+                                    </td>
+                                </tr>
+
+                                <tr class="relative">
+                                    <td>mmahmoud website</td>
+                                    <td>22 may 2021</td>
+                                    <td>mahmoud abdo</td>
+                                    <td>1300$</td>
+                                    <td class="team d-f">
+                                        <div class="img relative pointer">
+                                            <img class="circle" src="images/team-01.png" alt="team">
+                                        </div>
+                                        <div class="img relative pointer">
+                                            <img class="circle" src="images/team-02.png" alt="team">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="completed">completed</span>
+                                    </td>
+                                </tr>
+
+                                <tr class="relative">
+                                    <td>sayed website</td>
+                                    <td>02 may 2021</td>
+                                    <td>sayed company</td>
+                                    <td>2300$</td>
+                                    <td class="team d-f">
+                                        <div class="img relative pointer">
+                                            <img class="circle" src="images/team-01.png" alt="team">
+                                        </div>
+                                        <div class="img relative pointer">
+                                            <img class="circle" src="images/team-02.png" alt="team">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="rejected">rejected</span>
+                                    </td>
+                                </tr>
+
+                                <tr class="relative">
+                                    <td>arema applications</td>
+                                    <td>01 mar 2021</td>
+                                    <td>arema company</td>
+                                    <td>3100$</td>
+                                    <td class="team d-f">
+                                        <div class="img relative pointer">
+                                            <img class="circle" src="images/team-01.png" alt="team">
+                                        </div>
+                                        <div class="img relative pointer">
+                                            <img class="circle" src="images/team-02.png" alt="team">
+                                        </div>
+                                        <div class="img relative pointer">
+                                            <img class="circle" src="images/team-03.png" alt="team">
+                                        </div>
+                                        <div class="img relative pointer">
+                                            <img class="circle" src="images/team-04.png" alt="team">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="completed">completed</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- End Projects -->
+
+                <!-- Start Comments -->
+                <div class="comments-list b br-6 p-20 d-f column fixed z-1 bg-white b-shadow hide">
+                    <h2 class="txt-c">comments</h2>
+                    <span class="close-comment bg-blue white circle pointer absolute">x</span>
+                    <div class="comments b br-6 mt-5">
+                    </div>
+                    <form action="" class="absolute w-full">
+                        <input class="write-comment br-6 b" type="text" placeholder="write a comment">
+                        <i class="send fas fa-caret-right blue pointer"></i>
+                    </form>
+                </div>
+                <!-- End Comments -->
+            </section>
+            <!-- End Content -->
+        </main>
+
+        <!-- Importing JQuery File  -->
+        <script src="js/jquery-3.6.3.min.js"></script>
+        <!-- Main Js File -->
+        <script src="js/index.js"></script>
+    </body>
+</html>

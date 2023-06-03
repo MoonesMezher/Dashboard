@@ -1,0 +1,42 @@
+@mixin mediaQuery($name) {
+    @if $name == miny {
+        @media screen and (max-width: 575px) {
+            @content;
+        }
+    } @else if $name == mobile {
+        @media screen and (min-width: 576px) and (max-width: 767px) {
+            @content;
+        }
+    } @else if $name == small {
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            @content;
+        }
+    } @else if $name == medium {
+        @media screen and (min-width: 992px) and (max-width: 1199px) {
+            @content;
+        }
+    } @else if $name == large {
+        @media screen and (min-width: 1200px) and (max-width: 1399px){
+            @content;
+        }
+    } @else if $name == x-large {
+        @media screen and (min-width: 1400px){
+            @content;
+        }
+    }
+}
+
+@mixin rotateY($x) {
+    transform: rotateY($x);
+    -ms-transform: rotateY($x);
+    -moz-transform: rotateY($x);
+    -webkit-transform: rotateY($x);
+    -o-transform: rotateY($x);
+}
+@mixin translate($x,$y) {
+    transform: translate($x,$y);
+    -ms-transform: translate($x,$y);
+    -moz-transform: translate($x,$y);
+    -webkit-transform: translate($x,$y);
+    -o-transform: translate($x,$y);
+}
